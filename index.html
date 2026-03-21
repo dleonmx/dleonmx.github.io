@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -11,83 +13,67 @@
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:#0b0b0b;
-color:white;
-line-height:1.6;
+background:#f5f7fb;
+color:#222;
 }
 
-/* NAVBAR */
+/* NAV */
 
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 8%;
-background:#111;
-position:sticky;
-top:0;
-}
-
-nav h1{
-font-size:18px;
-margin:0;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
 nav a{
-color:#ccc;
 text-decoration:none;
+color:#444;
 margin-left:20px;
-font-size:14px;
 }
 
 nav a:hover{
-color:#00bfff;
+color:#2563eb;
 }
 
 /* HERO */
 
 .hero{
-padding:60px 8% 20px 8%;
+padding:60px 8%;
 }
 
-.hero h2{
-font-size:36px;
+.hero h1{
 margin-bottom:10px;
 }
 
-.hero p{
-color:#aaa;
-max-width:600px;
-}
-
-/* PROJECTS */
+/* PROJECT GRID */
 
 .projects{
-padding:40px 8%;
+padding:20px 8% 80px;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
 gap:30px;
 }
 
-.project{
-background:#151515;
+.project-card{
+background:white;
 border-radius:10px;
 overflow:hidden;
-transition:0.3s;
+box-shadow:0 4px 20px rgba(0,0,0,0.08);
+transition:0.25s;
+cursor:pointer;
 }
 
-.project:hover{
+.project-card:hover{
 transform:translateY(-6px);
 }
 
-.project img{
+.project-card img{
 width:100%;
 height:200px;
 object-fit:cover;
-}
-
-.project video{
-width:100%;
 }
 
 .project-content{
@@ -98,76 +84,36 @@ padding:20px;
 margin-top:0;
 }
 
-.project-content p{
-color:#bbb;
-font-size:14px;
-}
+/* ABOUT */
 
-.project-links{
-margin-top:10px;
-}
-
-.project-links a{
-text-decoration:none;
-color:#00bfff;
-margin-right:15px;
-font-size:14px;
-}
-
-/* SKILLS */
-
-.skills{
-padding:60px 8%;
-}
-
-.skill-list{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-}
-
-.skill{
-background:#151515;
-padding:10px 14px;
-border-radius:20px;
-font-size:14px;
-}
-
-/* CONTACT */
-
-.contact{
-padding:60px 8%;
-}
-
-.contact a{
-color:#00bfff;
-text-decoration:none;
-display:block;
-margin-top:10px;
+.about{
+padding:80px 8%;
+max-width:700px;
 }
 
 /* FOOTER */
 
 footer{
+padding:40px;
 text-align:center;
-padding:30px;
-background:#111;
-color:#777;
+color:#666;
 }
 
 </style>
+
 </head>
+
 
 <body>
 
+
 <nav>
 
-<h1>Daniel León</h1>
+<strong>Daniel León</strong>
 
 <div>
 <a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
+<a href="#about">About</a>
 </div>
 
 </nav>
@@ -175,11 +121,11 @@ color:#777;
 
 <section class="hero">
 
-<h2>Mechatronics Engineering Student</h2>
+<h1>Mechatronics Engineering Student</h1>
 
 <p>
-I design and build robotic and automation systems combining
-mechanics, electronics and software.
+I design and build robotic systems combining electronics,
+mechanics and software.
 </p>
 
 </section>
@@ -190,61 +136,41 @@ mechanics, electronics and software.
 
 <!-- PROJECT -->
 
-<div class="project">
+<a href="projects/cnc.html" class="project-card">
 
-<img src="images/cnc.jpg" alt="CNC Machine">
+<img src="images/cnc.jpg">
 
 <div class="project-content">
 
 <h3>CNC Laser Machine</h3>
 
-<p>
-Custom built CNC laser cutter controlled with Arduino and GRBL.
-</p>
-
-<div class="project-links">
-
-<a href="#">GitHub</a>
-<a href="#">Video</a>
+<p>Custom CNC laser cutter using Arduino and GRBL.</p>
 
 </div>
 
-</div>
-
-</div>
+</a>
 
 
 <!-- PROJECT -->
 
-<div class="project">
+<a href="projects/balancing_robot.html" class="project-card">
 
-<video controls>
-<source src="videos/balancing_robot.mp4" type="video/mp4">
-</video>
+<img src="images/robot.jpg">
 
 <div class="project-content">
 
 <h3>Self-Balancing Robot</h3>
 
-<p>
-Two wheel robot stabilized using PID control and IMU sensors.
-</p>
-
-<div class="project-links">
-
-<a href="#">GitHub</a>
-<a href="#">Documentation</a>
+<p>Two wheel robot stabilized with PID control.</p>
 
 </div>
 
-</div>
-
-</div>
+</a>
 
 
 <!-- PROJECT -->
 
-<div class="project">
+<a href="projects/conveyor.html" class="project-card">
 
 <img src="images/conveyor.jpg">
 
@@ -252,63 +178,35 @@ Two wheel robot stabilized using PID control and IMU sensors.
 
 <h3>Sorting Conveyor System</h3>
 
+<p>Automated conveyor for object classification.</p>
+
+</div>
+
+</a>
+
+
+</section>
+
+
+<section id="about" class="about">
+
+<h2>About Me</h2>
+
 <p>
-Automated conveyor for object classification using sensors.
+I am a mechatronics engineering student interested in robotics,
+automation and embedded systems. I enjoy designing physical systems
+that integrate mechanics, electronics and software.
 </p>
-
-<div class="project-links">
-
-<a href="#">GitHub</a>
-<a href="#">Project Page</a>
-
-</div>
-
-</div>
-
-</div>
-
-
-</section>
-
-
-<section id="skills" class="skills">
-
-<h2>Skills</h2>
-
-<div class="skill-list">
-
-<div class="skill">Arduino</div>
-<div class="skill">C++</div>
-<div class="skill">Python</div>
-<div class="skill">PID Control</div>
-<div class="skill">Embedded Systems</div>
-<div class="skill">Electronics</div>
-<div class="skill">CAD</div>
-<div class="skill">Robotics</div>
-
-</div>
-
-</section>
-
-
-<section id="contact" class="contact">
-
-<h2>Contact</h2>
-
-<p>Email: tuemail@gmail.com</p>
-
-<a href="#">GitHub</a>
-<a href="#">LinkedIn</a>
-<a href="#">Website</a>
 
 </section>
 
 
 <footer>
 
-<p>© 2026 Daniel León</p>
+© 2026 Daniel León
 
 </footer>
+
 
 </body>
 </html>
