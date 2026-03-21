@@ -6,206 +6,97 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Daniel León | Mechatronics Portfolio</title>
+<title>Daniel León | Projects</title>
 
 <style>
 
 body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#f5f7fb;
-color:#222;
+font-family:Arial;
+margin:40px auto;
+max-width:800px;
+line-height:1.6;
 }
 
-/* NAV */
-
-nav{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-}
-
-nav a{
-text-decoration:none;
-color:#444;
-margin-left:20px;
-}
-
-nav a:hover{
-color:#2563eb;
-}
-
-/* HERO */
-
-.hero{
-padding:60px 8%;
-}
-
-.hero h1{
+h1{
 margin-bottom:10px;
 }
 
-/* PROJECT GRID */
-
-.projects{
-padding:20px 8% 80px;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
+.project{
+margin-top:50px;
 }
 
-.project-card{
-background:white;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 4px 20px rgba(0,0,0,0.08);
-transition:0.25s;
-cursor:pointer;
-}
-
-.project-card:hover{
-transform:translateY(-6px);
-}
-
-.project-card img{
+video, img{
 width:100%;
-height:200px;
-object-fit:cover;
+margin-top:10px;
 }
 
-.project-content{
-padding:20px;
-}
-
-.project-content h3{
-margin-top:0;
-}
-
-/* ABOUT */
-
-.about{
-padding:80px 8%;
-max-width:700px;
-}
-
-/* FOOTER */
-
-footer{
-padding:40px;
-text-align:center;
-color:#666;
+a{
+color:blue;
 }
 
 </style>
 
 </head>
 
-
 <body>
 
+<h1>Daniel León</h1>
+<p>Mechatronics Engineering Student</p>
 
-<nav>
-
-<strong>Daniel León</strong>
-
-<div>
-<a href="#projects">Projects</a>
-<a href="#about">About</a>
-</div>
-
-</nav>
+<hr>
 
 
-<section class="hero">
+<div class="project">
 
-<h1>Mechatronics Engineering Student</h1>
+<h2>CNC Laser Machine</h2>
 
 <p>
-I design and build robotic systems combining electronics,
-mechanics and software.
+Custom CNC laser engraving machine built using Arduino and GRBL.
 </p>
 
-</section>
+<video controls>
+<source src="videos/cnc.mp4">
+</video>
 
-
-<section id="projects" class="projects">
-
-
-<!-- PROJECT -->
-
-<a href="projects/cnc.html" class="project-card">
-
-<img src="images/cnc.jpg">
-
-<div class="project-content">
-
-<h3>CNC Laser Machine</h3>
-
-<p>Custom CNC laser cutter using Arduino and GRBL.</p>
+<p>
+<a href="#">GitHub Repository</a>
+</p>
 
 </div>
 
-</a>
 
+<div class="project">
 
-<!-- PROJECT -->
+<h2>Self Balancing Robot</h2>
 
-<a href="projects/balancing_robot.html" class="project-card">
+<p>
+Two wheel robot stabilized with PID control and IMU sensors.
+</p>
 
 <img src="images/robot.jpg">
 
-<div class="project-content">
-
-<h3>Self-Balancing Robot</h3>
-
-<p>Two wheel robot stabilized with PID control.</p>
+<p>
+<a href="#">GitHub Repository</a>
+</p>
 
 </div>
 
-</a>
 
+<div class="project">
 
-<!-- PROJECT -->
+<h2>Sorting Conveyor System</h2>
 
-<a href="projects/conveyor.html" class="project-card">
+<p>
+Automated conveyor for object classification using sensors.
+</p>
 
 <img src="images/conveyor.jpg">
 
-<div class="project-content">
-
-<h3>Sorting Conveyor System</h3>
-
-<p>Automated conveyor for object classification.</p>
-
-</div>
-
-</a>
-
-
-</section>
-
-
-<section id="about" class="about">
-
-<h2>About Me</h2>
-
 <p>
-I am a mechatronics engineering student interested in robotics,
-automation and embedded systems. I enjoy designing physical systems
-that integrate mechanics, electronics and software.
+<a href="#">GitHub Repository</a>
 </p>
 
-</section>
-
-
-<footer>
-
-© 2026 Daniel León
-
-</footer>
+</div>
 
 
 </body>
