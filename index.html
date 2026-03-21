@@ -1,58 +1,231 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Daniel León | Portafolio</title>
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #0f0f0f;
-      color: white;
-    }
-    header {
-      padding: 40px;
-      text-align: center;
-    }
-    section {
-      padding: 40px;
-    }
-    .project {
-      margin-bottom: 30px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel León | Portafolio</title>
+
+<style>
+
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#0f0f0f;
+color:white;
+line-height:1.6;
+}
+
+header{
+text-align:center;
+padding:60px 20px;
+background:#141414;
+}
+
+header h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+header p{
+color:#bbbbbb;
+}
+
+nav{
+text-align:center;
+background:#1a1a1a;
+padding:10px;
+}
+
+nav a{
+color:white;
+margin:0 15px;
+text-decoration:none;
+font-size:14px;
+}
+
+nav a:hover{
+color:#00bfff;
+}
+
+section{
+padding:60px 10%;
+}
+
+h2{
+margin-bottom:30px;
+border-bottom:1px solid #333;
+padding-bottom:10px;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.project{
+background:#1a1a1a;
+padding:20px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-5px);
+}
+
+.project img{
+width:100%;
+border-radius:5px;
+margin-bottom:10px;
+}
+
+.project video{
+width:100%;
+border-radius:5px;
+margin-bottom:10px;
+}
+
+.skills{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.skill{
+background:#1a1a1a;
+padding:10px 15px;
+border-radius:20px;
+font-size:14px;
+}
+
+.links a{
+display:inline-block;
+margin-right:15px;
+color:#00bfff;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#141414;
+color:#888;
+}
+
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>Daniel León Meléndez</h1>
-  <p>Mechatronics Engineering Student</p>
+<h1>Daniel León Meléndez</h1>
+<p>Mechatronics Engineering Student</p>
+<p>Robotics • Automation • Embedded Systems</p>
 </header>
 
-<section>
-  <h2>Proyectos</h2>
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
 
-  <div class="project">
-    <h3>CNC Laser Machine</h3>
-    <p>Diseñé y construí una máquina CNC con Arduino y GRBL.</p>
-  </div>
+<section id="about">
+<h2>About Me</h2>
+<p>
+I am a mechatronics engineering student interested in robotics,
+automation systems and embedded electronics.  
+I enjoy designing and building physical systems that combine
+mechanics, electronics and software.
+</p>
+</section>
 
-  <div class="project">
-    <h3>Self-Balancing Robot</h3>
-    <p>Robot con control PID y sensor giroscopio.</p>
-  </div>
+<section id="projects">
 
-  <div class="project">
-    <h3>Sorting Conveyor System</h3>
-    <p>Sistema automático de clasificación con sensores.</p>
-  </div>
+<h2>Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>CNC Laser Machine</h3>
+
+<img src="images/cnc.jpg" alt="CNC Laser Machine">
+
+<p>Designed and built a CNC laser machine using Arduino and GRBL.</p>
+
+<a href="#">GitHub Repository</a>
+
+</div>
+
+
+<div class="project">
+<h3>Self-Balancing Robot</h3>
+
+<video controls>
+<source src="videos/balancing_robot.mp4" type="video/mp4">
+</video>
+
+<p>Two-wheel robot stabilized with PID control and gyroscope sensors.</p>
+
+<a href="#">GitHub Repository</a>
+
+</div>
+
+
+<div class="project">
+<h3>Sorting Conveyor System</h3>
+
+<img src="images/conveyor.jpg">
+
+<p>Automated sorting conveyor using sensors and microcontrollers.</p>
+
+<a href="#">Project Details</a>
+
+</div>
+
+</div>
 
 </section>
 
-<section>
-  <h2>Contacto</h2>
-  <p>Email: tuemail@gmail.com</p>
+<section id="skills">
+
+<h2>Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Arduino</div>
+<div class="skill">C++</div>
+<div class="skill">Python</div>
+<div class="skill">Embedded Systems</div>
+<div class="skill">PID Control</div>
+<div class="skill">CAD Design</div>
+<div class="skill">Electronics</div>
+<div class="skill">Robotics</div>
+
+</div>
+
 </section>
+
+<section id="contact">
+
+<h2>Contact</h2>
+
+<p>Email: tuemail@gmail.com</p>
+
+<div class="links">
+
+<a href="#">GitHub</a>
+<a href="#">LinkedIn</a>
+<a href="#">Website</a>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Daniel León</p>
+</footer>
 
 </body>
 </html>
