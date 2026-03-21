@@ -13,25 +13,69 @@
 body{
 font-family:Arial;
 margin:40px auto;
-max-width:800px;
+max-width:900px;
 line-height:1.6;
 }
+
+/* titulo */
 
 h1{
 margin-bottom:10px;
 }
 
-.project{
-margin-top:50px;
+/* grid de proyectos */
+
+.projects{
+display:grid;
+grid-template-columns:1fr;
+gap:40px;
+margin-top:40px;
 }
 
-video, img{
+/* tarjeta */
+
+.project-card{
+
+display:block;
+
+border:1px solid #ddd;
+border-radius:10px;
+
+overflow:hidden;
+
+text-decoration:none;
+color:black;
+
+transition:0.2s;
+}
+
+/* efecto hover */
+
+.project-card:hover{
+
+transform:translateY(-4px);
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+
+}
+
+/* imagen o video */
+
+.project-card img,
+.project-card video{
+
 width:100%;
-margin-top:10px;
+display:block;
+
 }
 
-a{
-color:blue;
+/* contenido */
+
+.project-content{
+padding:20px;
+}
+
+.project-content h2{
+margin-top:0;
 }
 
 </style>
@@ -45,8 +89,18 @@ color:blue;
 
 <hr>
 
+<div class="projects">
 
-<div class="project">
+
+<!-- PROYECTO 1 -->
+
+<a href="cnc.html" class="project-card">
+
+<video controls>
+<source src="videos/cnc.mp4">
+</video>
+
+<div class="project-content">
 
 <h2>CNC Laser Machine</h2>
 
@@ -54,18 +108,18 @@ color:blue;
 Custom CNC laser engraving machine built using Arduino and GRBL.
 </p>
 
-<video controls>
-<source src="videos/cnc.mp4">
-</video>
-
-<p>
-<a href="#">GitHub Repository</a>
-</p>
-
 </div>
 
+</a>
 
-<div class="project">
+
+<!-- PROYECTO 2 -->
+
+<a href="robot.html" class="project-card">
+
+<img src="images/robot.jpg">
+
+<div class="project-content">
 
 <h2>Self Balancing Robot</h2>
 
@@ -73,16 +127,18 @@ Custom CNC laser engraving machine built using Arduino and GRBL.
 Two wheel robot stabilized with PID control and IMU sensors.
 </p>
 
-<img src="images/robot.jpg">
-
-<p>
-<a href="#">GitHub Repository</a>
-</p>
-
 </div>
 
+</a>
 
-<div class="project">
+
+<!-- PROYECTO 3 -->
+
+<a href="conveyor.html" class="project-card">
+
+<img src="images/conveyor.jpg">
+
+<div class="project-content">
 
 <h2>Sorting Conveyor System</h2>
 
@@ -90,14 +146,12 @@ Two wheel robot stabilized with PID control and IMU sensors.
 Automated conveyor for object classification using sensors.
 </p>
 
-<img src="images/conveyor.jpg">
-
-<p>
-<a href="#">GitHub Repository</a>
-</p>
-
 </div>
 
+</a>
+
+
+</div>
 
 </body>
 </html>
