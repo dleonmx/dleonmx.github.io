@@ -11,7 +11,7 @@
 <style>
 
 body{
-font-family:Arial, Helvetica, sans-serif;
+font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 background:white;
 margin:40px auto;
 max-width:1000px;
@@ -29,8 +29,12 @@ margin-bottom:5px;
 }
 
 .subtitle{
-color:gray;
+color:#666;
 margin-top:0;
+}
+
+h2{
+margin-top:40px;
 }
 
 .socials img{
@@ -43,22 +47,6 @@ transition:0.2s;
 .socials img:hover{
 opacity:1;
 transform:scale(1.1);
-}
-
-.cv-button{
-display:inline-block;
-margin-top:15px;
-padding:8px 16px;
-border:1px solid #ddd;
-border-radius:6px;
-text-decoration:none;
-color:black;
-transition:0.2s;
-font-size:14px;
-}
-
-.cv-button:hover{
-background:#f5f5f5;
 }
 
 .projects{
@@ -75,17 +63,18 @@ margin-bottom:20px;
 
 .project-card{
 display:block;
-border:1px solid #ddd;
-border-radius:8px;
+border:1px solid #e5e5e5;
+border-radius:12px;
+background:white;
 overflow:hidden;
 text-decoration:none;
 color:black;
-transition:0.2s;
+transition:0.25s;
 }
 
 .project-card:hover{
-transform:translateY(-4px);
-box-shadow:0 6px 18px rgba(0,0,0,0.1);
+transform:translateY(-6px);
+box-shadow:0 12px 28px rgba(0,0,0,0.08);
 }
 
 .project-card img{
@@ -100,7 +89,7 @@ padding:20px;
 
 .project-title{
 font-size:20px;
-font-weight:bold;
+font-weight:600;
 margin-bottom:6px;
 }
 
@@ -122,8 +111,6 @@ font-size:14px;
 
 <h1>Daniel León</h1>
 <p class="subtitle">Mechatronics Engineering Student</p>
-
-<a href="cv.pdf" class="cv-button">Download CV</a>
 
 </div>
 
@@ -153,8 +140,6 @@ A selection of hardware and embedded systems projects. Click a project to view d
 <div class="projects">
 
 
-<!-- PROJECT 1 -->
-
 <a href="project1.html" class="project-card">
 
 <img src="images/project1.jpeg">
@@ -174,8 +159,6 @@ Coin-operated arcade cabinet built from scratch with Raspberry Pi and Arduino, f
 </a>
 
 
-<!-- PROJECT 2 -->
-
 <a href="project2.html" class="project-card">
 
 <img src="images/project2.jpeg">
@@ -194,8 +177,6 @@ ESP32-based hardware device with TFT interface and NeoPixel feedback designed to
 
 </a>
 
-
-<!-- PROJECT 3 -->
 
 <a href="project3.html" class="project-card">
 
