@@ -18,12 +18,53 @@ max-width:1000px;
 line-height:1.6;
 }
 
+.header{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+}
+
 h1{
 margin-bottom:5px;
 }
 
-p.subtitle{
+.subtitle{
 color:gray;
+margin-top:0;
+}
+
+.about{
+max-width:650px;
+color:#444;
+margin-top:10px;
+}
+
+.socials img{
+width:28px;
+margin-left:12px;
+opacity:0.8;
+transition:0.2s;
+}
+
+.socials img:hover{
+opacity:1;
+transform:scale(1.1);
+}
+
+.cv-button{
+display:inline-block;
+margin-top:15px;
+padding:8px 16px;
+border:1px solid #ddd;
+border-radius:6px;
+text-decoration:none;
+color:black;
+transition:0.2s;
+font-size:14px;
+}
+
+.cv-button:hover{
+background:#f5f5f5;
 }
 
 .projects{
@@ -54,10 +95,19 @@ height:200px;
 object-fit:cover;
 }
 
-.project-title{
+.project-content{
 padding:20px;
+}
+
+.project-title{
 font-size:20px;
 font-weight:bold;
+margin-bottom:6px;
+}
+
+.project-desc{
+color:#666;
+font-size:14px;
 }
 
 </style>
@@ -67,8 +117,37 @@ font-weight:bold;
 
 <body>
 
+<div class="header">
+
+<div>
+
 <h1>Daniel León</h1>
 <p class="subtitle">Mechatronics Engineering Student</p>
+
+<p class="about">
+I design and build embedded systems, hardware prototypes, and connected devices.
+My projects combine electronics, mechanical design, and software to create functional systems in the real world. 
+I am particularly interested in embedded systems, hardware-software integration, and building physical products from the ground up.
+</p>
+
+<a href="cv.pdf" class="cv-button">Download CV</a>
+
+</div>
+
+
+<div class="socials">
+
+<a href="https://github.com/YOUR_GITHUB" target="_blank">
+<img src="images/github.png">
+</a>
+
+<a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">
+<img src="images/linkedin.png">
+</a>
+
+</div>
+
+</div>
 
 <hr>
 
@@ -81,8 +160,16 @@ font-weight:bold;
 
 <img src="images/project1.jpg">
 
+<div class="project-content">
+
 <div class="project-title">
-Arcade Monitoring System
+Network-Connected Arcade Machine
+</div>
+
+<div class="project-desc">
+Coin-operated arcade cabinet built from scratch with Raspberry Pi and Arduino, featuring remote telemetry, revenue tracking, and a web monitoring dashboard.
+</div>
+
 </div>
 
 </a>
@@ -94,8 +181,16 @@ Arcade Monitoring System
 
 <img src="images/project2.jpg">
 
+<div class="project-content">
+
 <div class="project-title">
-  Automatic Habit Tracker
+Embedded Habit Tracking Device
+</div>
+
+<div class="project-desc">
+ESP32-based hardware device with TFT interface and NeoPixel feedback designed to reduce friction when tracking daily habits and visualize streak consistency.
+</div>
+
 </div>
 
 </a>
@@ -107,8 +202,16 @@ Arcade Monitoring System
 
 <img src="images/project3.jpg">
 
+<div class="project-content">
+
 <div class="project-title">
-CNC Laser Engraving Machine
+Custom CNC Laser Engraving System
+</div>
+
+<div class="project-desc">
+Low-cost CNC laser engraver designed with aluminum extrusions and 3D-printed parts, controlled with Arduino and GRBL for precise G-code motion control.
+</div>
+
 </div>
 
 </a>
