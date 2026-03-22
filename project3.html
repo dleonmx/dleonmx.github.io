@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Project Title</title>
+<title>Desktop CNC Laser Engraving Machine</title>
 
 <style>
 
@@ -46,37 +46,57 @@ margin-top:10px;
 
 <a href="index.html" class="back">← Back to projects</a>
 
-<h1>PROJECT TITLE</h1>
+<h1>Desktop CNC Laser Engraving Machine</h1>
 
 
 <h2>What it is</h2>
 
 <p>
-Describe what the project is here.
+Designed and built a low-cost desktop CNC laser engraving machine from scratch with the goal of creating an affordable yet capable fabrication tool. The project focused on achieving good mechanical rigidity, precision motion control, and reliable laser engraving performance while keeping the overall system accessible and modular.
+</p>
+
+<p>
+The machine combines custom mechanical design, 3D printed structural components, aluminum extrusion framing, and open-source CNC control software. The result is a compact fabrication platform capable of engraving and cutting materials such as wood, paper, leather, and acrylic.
 </p>
 
 
 <h2>Video</h2>
 
 <video controls>
-<source src="videos/project-video.mp4" type="video/mp4">
+<source src="videos/cnc-laser-machine.mp4" type="video/mp4">
 </video>
 
 
 <h2>How it works</h2>
 
 <p>
-Explain how the system works.
+The mechanical structure was designed around aluminum 2020 extrusion profiles combined with custom PETG 3D printed components that hold the motion system and laser assembly. Multiple design iterations were developed to improve alignment, rigidity, and reliability of the moving axes.
+</p>
+
+<p>
+The motion system uses stepper motors driving a belt-based linear motion mechanism to control the X and Y axes. These motors are controlled by an Arduino running the GRBL firmware, which interprets standard G-code commands and translates them into precise motor movements.
+</p>
+
+<p>
+Laser engraving operations are executed through LaserBurn software, which generates and streams G-code instructions to the controller. This allows vector paths and raster engraving operations to be executed with accurate motion control and repeatability.
+</p>
+
+<p>
+Designing the system required mechanical iteration, calibration of motion parameters, alignment of the laser module, and tuning of GRBL settings such as acceleration, step resolution, and travel limits to ensure consistent engraving quality.
 </p>
 
 
 <h2>Tech used</h2>
 
 <ul>
-<li>Technology 1</li>
-<li>Technology 2</li>
-<li>Technology 3</li>
-<li>Technology 4</li>
+<li>Arduino</li>
+<li>GRBL CNC Firmware</li>
+<li>LaserBurn</li>
+<li>Stepper Motors</li>
+<li>2020 Aluminum Extrusions</li>
+<li>PETG 3D Printed Parts</li>
+<li>G-code Motion Control</li>
+<li>Mechanical Design & Prototyping</li>
 </ul>
 
 
