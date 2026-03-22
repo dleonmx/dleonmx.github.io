@@ -1,82 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Project Title</title>
-
-<style>
-
-body{
-font-family:Arial;
-background:white;
-margin:40px auto;
-max-width:800px;
-line-height:1.6;
-}
-
-video, img{
-width:100%;
-margin-top:20px;
-border-radius:6px;
-}
-
-a{
-color:#0066cc;
-text-decoration:none;
-}
-
-.back{
-margin-bottom:30px;
-display:inline-block;
-}
-
-ul{
-margin-top:10px;
-}
-
-</style>
-
-</head>
-
-<body>
-
-<a href="index.html" class="back">← Back to projects</a>
-
 <h1>Arcade Monitoring System</h1>
-
 
 <h2>What it is</h2>
 
 <p>
-Describe what the project is here.
+Designed and built a fully functional arcade machine from scratch with the goal of operating it as a real-world business. 
+The system combines custom hardware, embedded systems, and backend monitoring to manage the machine remotely and collect operational metrics.
+The arcade cabinet was designed, assembled, and deployed in a physical location where it currently operates as a revenue-generating machine.
 </p>
 
 
 <h2>Video</h2>
 
 <video controls>
-<source src="videos/project-video.mp4" type="video/mp4">
+<source src="videos/arcade-monitoring-system.mp4" type="video/mp4">
 </video>
 
 
 <h2>How it works</h2>
 
 <p>
-Explain how the system works.
+The arcade cabinet was physically designed and assembled to operate reliably in a public environment. A Raspberry Pi runs a customized Debian-based system configured to boot directly into the arcade game interface, removing visible traces of the operating system to create a seamless arcade experience.
+</p>
+
+<p>
+An Arduino Micro handles hardware inputs and coin validation. A custom program allows the joystick and buttons to interface with the system while also integrating a coin sorter that enables credit-based gameplay.
+</p>
+
+<p>
+When the machine powers on, a Python script automatically runs in the background and sends periodic POST requests to a Flask server. This backend collects operational data such as machine temperature, uptime, total revenue collected, and usage timestamps.
+</p>
+
+<p>
+The data is stored and displayed through a web dashboard that allows remote monitoring of the machine's performance and activity. This enables real-time insights into machine health, usage patterns, and revenue metrics.
 </p>
 
 
 <h2>Tech used</h2>
 
 <ul>
-<li>Technology 1</li>
-<li>Technology 2</li>
-<li>Technology 3</li>
-<li>Technology 4</li>
+<li>Raspberry Pi</li>
+<li>Arduino Micro</li>
+<li>Python</li>
+<li>Flask</li>
+<li>Debian (custom boot configuration)</li>
+<li>Embedded Systems Integration</li>
+<li>Hardware Prototyping</li>
 </ul>
 
 
@@ -85,7 +53,3 @@ Explain how the system works.
 <a href="https://github.com/YOUR_REPOSITORY">
 View Repository
 </a>
-
-</body>
-
-</html>
