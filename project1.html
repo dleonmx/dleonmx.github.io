@@ -1,11 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Arcade Monitoring System</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:white;
+margin:40px auto;
+max-width:800px;
+line-height:1.6;
+}
+
+video, img{
+width:100%;
+margin-top:20px;
+border-radius:6px;
+}
+
+a{
+color:#0066cc;
+text-decoration:none;
+}
+
+.back{
+margin-bottom:30px;
+display:inline-block;
+}
+
+ul{
+margin-top:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="index.html" class="back">← Back to projects</a>
+
 <h1>Arcade Monitoring System</h1>
+
 
 <h2>What it is</h2>
 
 <p>
 Designed and built a fully functional arcade machine from scratch with the goal of operating it as a real-world business. 
-The system combines custom hardware, embedded systems, and backend monitoring to manage the machine remotely and collect operational metrics.
-The arcade cabinet was designed, assembled, and deployed in a physical location where it currently operates as a revenue-generating machine.
+The system integrates custom hardware, embedded systems, and backend monitoring to manage the machine remotely and collect operational metrics.
+The arcade cabinet was designed and assembled specifically for use in a public environment and is currently deployed and operating in a physical location.
 </p>
 
 
@@ -19,19 +68,19 @@ The arcade cabinet was designed, assembled, and deployed in a physical location 
 <h2>How it works</h2>
 
 <p>
-The arcade cabinet was physically designed and assembled to operate reliably in a public environment. A Raspberry Pi runs a customized Debian-based system configured to boot directly into the arcade game interface, removing visible traces of the operating system to create a seamless arcade experience.
+The arcade cabinet was physically designed and assembled to operate reliably in a public setting. A Raspberry Pi runs a customized Debian-based environment configured to boot directly into the arcade interface, hiding the operating system to create a seamless arcade experience.
 </p>
 
 <p>
-An Arduino Micro handles hardware inputs and coin validation. A custom program allows the joystick and buttons to interface with the system while also integrating a coin sorter that enables credit-based gameplay.
+An Arduino Micro manages hardware inputs including the joystick, buttons, and a coin sorter. A custom control program allows the system to process coin inputs and translate joystick actions into game controls.
 </p>
 
 <p>
-When the machine powers on, a Python script automatically runs in the background and sends periodic POST requests to a Flask server. This backend collects operational data such as machine temperature, uptime, total revenue collected, and usage timestamps.
+When the machine powers on, a Python script automatically runs in the background and sends periodic POST requests to a Flask server. This server collects operational data such as machine temperature, uptime, total revenue collected, and activity timestamps.
 </p>
 
 <p>
-The data is stored and displayed through a web dashboard that allows remote monitoring of the machine's performance and activity. This enables real-time insights into machine health, usage patterns, and revenue metrics.
+The data is displayed on a web dashboard that allows remote monitoring of the machine’s status and performance, providing insights into usage patterns and machine health.
 </p>
 
 
@@ -53,3 +102,7 @@ The data is stored and displayed through a web dashboard that allows remote moni
 <a href="https://github.com/YOUR_REPOSITORY">
 View Repository
 </a>
+
+</body>
+
+</html>
