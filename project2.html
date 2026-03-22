@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Project Title</title>
+<title>Embedded Habit Tracking Device</title>
 
 <style>
 
@@ -46,37 +46,59 @@ margin-top:10px;
 
 <a href="index.html" class="back">← Back to projects</a>
 
-<h1>PROJECT TITLE</h1>
+<h1>Embedded Habit Tracking Device</h1>
 
 
 <h2>What it is</h2>
 
 <p>
-Describe what the project is here.
+Designed and built a dedicated hardware habit-tracking device aimed at reducing the friction associated with digital habit tracking. 
+The system provides a simple physical interface that allows users to quickly log daily habits and receive visual feedback on their progress.
+</p>
+
+<p>
+The device displays habits using iconography on a TFT screen and provides an intuitive input system through a rotary encoder. 
+A row of NeoPixel LEDs visualizes habit streaks, allowing users to quickly see their consistency over multiple days.
 </p>
 
 
 <h2>Video</h2>
 
 <video controls>
-<source src="videos/project-video.mp4" type="video/mp4">
+<source src="videos/habit-tracker-device.mp4" type="video/mp4">
 </video>
 
 
 <h2>How it works</h2>
 
 <p>
-Explain how the system works.
+The system is powered by an ESP32 microcontroller connected to a TFT display, a rotary encoder for navigation, and NeoPixel LEDs for visual streak feedback.
+Each habit is represented on the screen using an icon. By default habits appear in red, indicating that they have not yet been completed for the day. Pressing the encoder marks the habit as completed and updates the icon to green.
+</p>
+
+<p>
+Users can rotate the encoder to navigate between different habits. The NeoPixel LEDs at the bottom of the device display historical completion data, visually representing streaks across previous days. Completed days appear in green, while missed days appear in red.
+</p>
+
+<p>
+The device synchronizes time with an internet server to determine daily resets. At the start of each new day the system automatically resets habit statuses.
+</p>
+
+<p>
+To ensure reliability, the system stores habit data locally using ESP32 Preferences (non-volatile storage). This allows the device to retain habit history even if power is lost or the system is disconnected from the internet.
 </p>
 
 
 <h2>Tech used</h2>
 
 <ul>
-<li>Technology 1</li>
-<li>Technology 2</li>
-<li>Technology 3</li>
-<li>Technology 4</li>
+<li>ESP32</li>
+<li>TFT Display</li>
+<li>NeoPixel LEDs</li>
+<li>Rotary Encoder</li>
+<li>C++ / Arduino Framework</li>
+<li>Embedded Systems Programming</li>
+<li>Non-Volatile Storage (ESP32 Preferences)</li>
 </ul>
 
 
